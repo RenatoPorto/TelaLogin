@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace ProjetoLogin.Util.Validation
 {
-    public class MarcarComoTrueAttribute
+    public class MarcarComoTrueAttribute : Attribute, IModelValidator
     {
         public bool IsRequired => true;
         public string ErrorMessage { get; set; } = "Você deve marcar como true";
@@ -25,4 +27,3 @@ namespace ProjetoLogin.Util.Validation
         }
     }
 }
-

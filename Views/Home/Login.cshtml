@@ -5,30 +5,31 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("input.input-validation-error").addClass("is-invalid");
-        });
-        
+        });        
     </script>
 }
-    <div class="bg-primary panel-body"><h2 class="text-center text-white display-5">Acessar Sistema</h2></div>
+    <div class="bg-info panel-body"><h3 class="text-center text-white display-7">Acessar Sistema</h3></div>
+
     <form class="panel-body" asp-action="Login" method="post">
 
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <hr />
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-        <div class="form-group">
+        
+        <div style="margin-bottom" class="panel-body">
             <label asp-for="Email">Email:</label>
             <div><span asp-validation-for="Email" class="text-danger"></span></div>
-            <input asp-for="Email" type="text" class="form-control" />
+            <input asp-for="Email" type="text" class="form-control" placeholder="Email"/>
         </div>
 
-        <div class="form-group">
+        <div  style="margin-bottom" class="panel-body">
             <label asp-for="Senha">Senha:</label>
             <div><span asp-validation-for="Senha" class="text-danger"></span></div>
-            <input asp-for="Senha" type="password" class="form-control" />
+            <input asp-for="Senha" type="password" class="form-control" placeholder="Senha" />
         </div>
-        <section class="row justify-content-center mb-5">
-            <button type="submit" class="btn btn-primary">Acessar</button>
+        </p>
+        <section class="row justify-content-center mb-5">            
+                <button type="submit" class="btn btn-outline-info">Acessar</button>
+                
         </section>
         
     </form>
